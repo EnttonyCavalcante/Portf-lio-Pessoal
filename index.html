@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <center><img src="Imagens/Enttony Felipe Pereira Cavalcante.jpg" alt="Enttony" width="100"></center>
+    <center><h1>Enttony Cavalcante</h1></center>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color:#00444d
+        }
+        nav {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration:none;
+            color: #007e8f;
+            font-size: 18px;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            text-align: center; /* Centraliza o conteúdo */
+        }
+        section.active {
+            display: block;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left; /* Ajusta o alinhamento do formulário */
+        }
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showSection('sobre')">Sobre mim</a>
+        <a href="#" onclick="showSection('formacao')">Formação</a>
+        <a href="#" onclick="showSection('portfolio')">Portfólio</a>
+        <a href="#" onclick="showSection('contato')">Contato</a>
+    </nav>
+
+    <section id="sobre" class="active">
+        <center><img src="Imagens/Familia.jpg" width="100"></center>
+        <h2>Sobre mim</h2>
+        <p>Atualmente estou em atuação CLT no ramo de mineração a céu aberto, prestando consultoria para áreas afins da Vale, no quesito de equipamentos de mineração, como: escavadeiras, caminhões fora de estrada, carregadeiras de pequeno e grande porte, motoniveladoras, tratores de esteira e de pneus.<br> Sou formando no curso de ADS na Unopar e também curso Engenharia de Software na Uninter. Tenho muito desejo de aprender cada vez mais da área da programação e futuramente seguir carreira.<br> Gosto de games e de momentos legais que ele proporciona, principalmente em grupo. Sou casado e tenho um filho de 1 ano e 8 meses que é a alegria da casa, e também das nossas vidas.</p>
+    </section>
+
+    <section id="formacao">
+        <h2>Formação</h2>
+        <p>Análise e Desenvolvimento de Sistemas - Unopar - Formando<br>Engenharia de Software - Uninter - Cursando<br>Técnico em Eletrotécnica - Soter - Cuncluído<br>Ensino Fundamental e Médio - Completo</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p>Elaborei dois jogos simples para fixação do conhecimento em cursos que participei e está em minha base do GitHub</p>
+        <a href="https://github.com/EnttonyCavalcante">Enttony Cavalcante - GitHub</a>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+            <center><button type="submit">Enviar</button></center>
+        </form>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            // Esconde todas as seções
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Mostra a seção selecionada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
